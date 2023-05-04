@@ -42,7 +42,7 @@ const Login = () => {
         },
       };
       const { data } = await axios.post(
-        "/api/user/login",
+        "https://mern-chat-production.onrender.com/user/login",
         {
           email,
           password,
@@ -50,7 +50,7 @@ const Login = () => {
         config
       );
       toast({
-        title: "Registro efetuado com sucesso",
+        title: "Bem vindo ao chat",
         status: "success",
         duration: 5000,
         isClosable: true,
