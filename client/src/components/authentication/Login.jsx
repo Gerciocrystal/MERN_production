@@ -42,7 +42,7 @@ const Login = () => {
         },
       };
       const { data } = await axios.post(
-        "https://mern-chat-production.onrender.com/user/login",
+        "/api/user/login",
         {
           email,
           password,
