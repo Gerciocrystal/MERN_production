@@ -6,9 +6,12 @@ const connectDb = require("./config/db");
 const colors = require("colors");
 const Routes = require("./routes/index");
 const path = require("path"); // deployment
+const cors = require('cors');
+
 dotenv.config();
 connectDb();
 app.use(express.json());
+app.use(cors());
 app.use("/api", Routes);
 // ------------------------------------Production---------
 const __dirname1 = path.resolve();
